@@ -33,6 +33,7 @@
                 align-items: center;
                 justify-content: center;
                 transition: all 0.3s linear;
+                z-index: 99;
                 img {
                     width: min(0.81vw, 13px);
                 }
@@ -43,6 +44,15 @@
             }
         }
     }
+}
+.leader_coins_img {
+    position: absolute;
+    width: min(27.81vw, 445px);
+    top: 22%;
+    left: 57%;
+}
+.leader_coins_mobile_img {
+    display: none;
 }
 
 .fadeOut {
@@ -62,6 +72,9 @@
     width: min(61.94vw, 991px);
     margin-bottom: min(5.19vw, 83px);
     margin-top: min(7.5vw, 120px);
+    &_img {
+        position: relative;
+    }
     &_info {
         width: min(31.88vw, 510px);
         color: #fff;
@@ -113,6 +126,18 @@
 }
 
 @media (max-width: 375px) {
+    .leader_coins_img {
+        display: none;
+    }
+    .leader_coins_mobile_img {
+        position: absolute;
+        display: block;
+        width: min(57.33vw, 215px);
+        height: min(61.87vw, 232px);
+        top: 12%;
+        left: 21%;
+        z-index: 10;
+    }
     .slider_pages {
         display: none;
     }

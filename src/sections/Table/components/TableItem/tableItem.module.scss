@@ -25,11 +25,6 @@
         gap: min(6.25vw, 100px);
         font-size: $size16px;
         font-family: $GRegular;
-
-        >*:not(:last-child) {
-            border-right: 1px solid rgba(255, 255, 255, 0.2);
-            padding-right: min(4.96vw, 18.6px);
-        }
     }
 }
 

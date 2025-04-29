@@ -4,12 +4,15 @@ import { text } from './data';
 import { SubTitle } from '../../components/SubTitle/SubTitle';
 import { Title } from '../../components/Title/Title';
 import { PaginationItem } from '../../components/PaginationItem/PaginationItem'
+import { Element, Link } from 'react-scroll';
 
 export const Leaders = () => {
   const img_1 = require('./assets/slide_img_1.png');
   const img_2 = require('./assets/slide_img_2.png');
   const left = require('./assets/left.png');
   const right = require('./assets/right.png');
+  const leader_coins = require('./assets/leader_coins.png');
+  const leader_coins_mobile = require('./assets/leader_coins_mobile.png');
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [fadeOut, setFadeOut] = useState(false);
@@ -77,6 +80,15 @@ export const Leaders = () => {
     }
   }, [fadeIn]);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      toggleIndex((currentIndex + 1) % slides.length);
+    }, 5000); // каждые 5 секунд
+
+    return () => clearInterval(interval);
+  }, [currentIndex, slides.length]);
+
+
   return (
     <div className={styles.container}>
       <SubTitle text={'Leaders'} />
@@ -90,6 +102,8 @@ export const Leaders = () => {
             <img src={right} alt="right" />
           </button>
         </div>
+        <img className={`${styles.leader_coins_img} ${fadeOut ? styles.fadeOut : ''} ${fadeIn ? styles.fadeIn : ''}`} src={leader_coins} alt="leader_coins" />
+        <img className={`${styles.leader_coins_mobile_img} ${fadeOut ? styles.fadeOut : ''} ${fadeIn ? styles.fadeIn : ''}`} src={leader_coins_mobile} alt="leader_coins" />
         <div className={`${styles.slider_slide} ${fadeOut ? styles.fadeOut : ''} ${fadeIn ? styles.fadeIn : ''}`}>
           <div className={styles.slider_slide_info}>
             <div className={styles.slider_slide_info_text}>
