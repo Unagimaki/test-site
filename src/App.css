@@ -12,6 +12,7 @@ button {
 }
 
 body {
+  overflow-x: hidden;
   background-color: #12393B;
   padding-bottom: min(1.25vw, 20px);
   background: url('./assets/images/desktop_background.png');

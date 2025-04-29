@@ -24,6 +24,7 @@
             display: flex;
             gap: min(0.69vw, 11px);
             button {
+                cursor: pointer;
                 width: min(3vw, 48px);
                 height: min(3vw, 48px);
                 border-radius: 50%;
@@ -31,10 +32,15 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                transition: all 0.3s linear;
                 img {
                     width: min(0.81vw, 13px);
                 }
             }   
+            button:hover {
+                background-color: #12393B;
+                border: 1px solid #fff;
+            }
         }
     }
 }

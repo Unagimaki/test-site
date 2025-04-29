@@ -21,8 +21,9 @@ export const DropdownMenu = ({handleMenu}) => {
                         <button onClick={handleMenu} className={styles.dropdownMenu_list_button}>Stats</button>
                     </Link>
             </div>
-            <div className={styles.dropdownMenu_reg_button}>Register Now</div>
-            
+            <Link to='Intro' smooth={true} duration={500}>
+                <button onClick={handleMenu} className={styles.dropdownMenu_reg_button}>Register Now</button>
+            </Link>
             <div className={styles.dropdownMenu_policy}>
                 <div className={styles.dropdownMenu_policy_item}>Privacy policy</div>
                 <div className={styles.dropdownMenu_policy_item}>Terms</div>

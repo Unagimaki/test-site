@@ -3,6 +3,7 @@ import styles from './leaders.module.scss';
 import { text } from './data';
 import { SubTitle } from '../../components/SubTitle/SubTitle';
 import { Title } from '../../components/Title/Title';
+import { PaginationItem } from '../../components/PaginationItem/PaginationItem'
 
 export const Leaders = () => {
   const img_1 = require('./assets/slide_img_1.png');
@@ -15,12 +16,16 @@ export const Leaders = () => {
   const [fadeIn, setFadeIn] = useState(false);
 
   const nextSlide = () => {
-    if (fadeOut || fadeIn) return
-    setFadeOut(true); // Включаем fadeOut перед переключением слайда
+    if (fadeOut || fadeIn) return;
+    const index = (currentIndex + 1) % slidesLength;
+    setNextIndex(index);
+    setFadeOut(true);
   };
 
   const prevSlide = () => {
-    if (fadeOut || fadeIn) return
+    if (fadeOut || fadeIn) return;
+    const index = (currentIndex - 1 + slidesLength) % slidesLength;
+    setNextIndex(index);
     setFadeOut(true);
   };
 
@@ -38,23 +43,29 @@ export const Leaders = () => {
       role: 'Journalist, broadcaster',
     },
   ];
+  const slidesLength = slides.length;
+
+  const toggleIndex = (index) => {
+    if (fadeOut || fadeIn || index === currentIndex) return
+
+    setFadeOut(true)
+    setNextIndex(index) // сохраняем, куда хотим переключиться
+  }
+
+  const [nextIndex, setNextIndex] = useState(null)
 
   useEffect(() => {
-    if (fadeOut) {
+    if (fadeOut && nextIndex !== null) {
       const timer = setTimeout(() => {
-        // После того как слайд исчезнет (1000ms), переключаем слайд
-        if (currentIndex === slides.length - 1) {
-          setCurrentIndex(0);
-        } else {
-          setCurrentIndex((prevIndex) => prevIndex + 1);
-        }
-        setFadeOut(false); // Убираем fadeOut
-        setFadeIn(true); // Включаем fadeIn для нового слайда
-      }, 500); // Время исчезновения
+        setCurrentIndex(nextIndex)
+        setNextIndex(null)
+        setFadeOut(false)
+        setFadeIn(true)
+      }, 500)
 
-      return () => clearTimeout(timer); // Очищаем таймер при размонтировании
+      return () => clearTimeout(timer)
     }
-  }, [fadeOut, currentIndex]);
+  }, [fadeOut, nextIndex])
 
   useEffect(() => {
     if (fadeIn) {
@@ -98,13 +109,11 @@ export const Leaders = () => {
           </div>
         </div>
         <div className={styles.slider_pages}>
-          {slides.map((item, index) => (
-            <div
-              key={index}
-              style={{ backgroundColor: index === currentIndex ? '#E3FF34' : '' }}
-              className={styles.slider_pages_item}
-            />
-          ))}
+          {slides.map((item, index) => {
+            return(
+              <PaginationItem onClick={() => toggleIndex(index)} type={index === currentIndex ? 'fill' : ''}/>
+            )
+          })}
         </div>
       </div>
     </div>

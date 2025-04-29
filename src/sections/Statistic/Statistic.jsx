@@ -14,8 +14,8 @@ export const Statistic = () => {
                 </div>
                 <div className={styles.container_inner_stat_list}>
                     <StatItem count={87} text={'Current Investments'} title={'million'}/>
-                    <StatItem count={87} text={'Total Earnings'} title={'million'}/>
-                    <StatItem count={87} text={'Platform Turnover'} title={'million'}/>
+                    <StatItem count={298} text={'Total Earnings'} title={'million'}/>
+                    <StatItem count={1.3} text={'Platform Turnover'} title={'million'}/>
                 </div>
                 <div className={styles.container_inner_bottom_text}>
                     Our team of professional analysts provides accurate results with the lowest percentage of risk in mind. XX offers all partners a stable and highly profitable way of earning.

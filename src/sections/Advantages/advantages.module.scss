@@ -27,9 +27,9 @@
         display: none;
     }
     .advantages_list_mobile {
+        overflow: hidden;
         margin-top: min(16vw, 60px);
         margin-bottom: min(8.53vw, 32px);
-        overflow-x: scroll;
         display: block;
         width: 100vw;
         padding-left: min(4.27vw, 16px);

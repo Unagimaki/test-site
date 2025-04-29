@@ -1,6 +1,11 @@
 @import '../../assets/styles/vars.scss';
 
 .container {
+    width: $size12px;
+    height: $size12px;
+    border: min(0.27vw, 1px) solid #E3FF34;
+    border-radius: 50%;
+    cursor: pointer;
 
 }
 
