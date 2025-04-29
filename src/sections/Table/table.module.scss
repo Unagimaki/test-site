@@ -1,6 +1,7 @@
 @import '../../assets/styles/vars.scss';
 
 .container {
+    position: relative;
     &_inner {
         display: flex;
         flex-direction: column;
@@ -49,9 +50,13 @@
         }
     }
 }
+.coins_top, .coins_bottom {
+    display: none;
+}
 
 @media (max-width: 375px) {
     .table {
+        position: relative;
         margin-top: min(40vw, 150px);
         width: 100%;
         border-radius: min(8.53vw, 32px);
@@ -61,5 +66,19 @@
         &_title {
             display: none;
         }
+    }
+    .coins_top, .coins_bottom {
+        display: block;
+        position: absolute;
+    }
+    .coins_bottom {
+        top: 83%;
+        left: 0%;
+        z-index: 10;
+    }
+    .coins_top {
+        top: 13%;
+        left: 0%;
+        z-index: 10;
     }
 }

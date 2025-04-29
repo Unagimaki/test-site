@@ -61,6 +61,7 @@
 @media (max-width: 375px) {
     .container {
         height: max-content;
+        min-height: 100vh;
         &_inner {
             width: min(91.47vw, 343px);
             flex-direction: column;

@@ -6,11 +6,17 @@ import styles from './table.module.scss'
 
 export const Table = () => {
     const arr = table_data
+    const coins_top = require('./assets/coins-top.png')
+    const coins_bottom = require('./assets/coins-bottom.png')
     return(
         <div className={styles.container}>
             <div className={styles.container_inner}>
                 <SubTitle text={'Trades'}/>
                 <Title text='GreenChart uses Artificial Intelligence and State-of-the art algorithms to identify only profitable trades'/>
+                
+                {/* <img className={styles.coins_top} src={coins_top} alt="coins_top" />
+                <img className={styles.coins_bottom} src={coins_bottom} alt="coins_bottom" /> */}
+
                 <div className={styles.table}>
                     <div className={styles.table_title}>
                         <div className={styles.table_title_info}>

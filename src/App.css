@@ -4,7 +4,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 
 button {
@@ -16,6 +15,12 @@ body {
   background-color: #12393B;
   padding-bottom: min(1.25vw, 20px);
 }
-body.locked {
-  overflow: hidden;
+
+
+@media (max-width: 375px) {
+  body {
+    background: url('./assets/images/mobile_phone.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }

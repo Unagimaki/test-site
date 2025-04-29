@@ -1,15 +1,15 @@
 import styles from './advantageItem.module.scss'
 
-export const AdvantageItem = () => {
+export const AdvantageItem = ({tag, title, text}) => {
     const photo = require('./assets/photo.png')
     const icon = require('./assets/icon.png')
     return(
         <div className={styles.container}>
             <div className={styles.container_inner}>
                 <div className={styles.container_inner_info}>
-                    <div className={styles.container_inner_info_tag}>Advantage</div>
-                    <div className={styles.container_inner_info_title}>Easy to use</div>
-                    <div className={styles.container_inner_info_text}>GreenChart installs in seconds on any mobile device or computer</div>
+                    <div className={styles.container_inner_info_tag}>{tag}</div>
+                    <div className={styles.container_inner_info_title}>{title}</div>
+                    <div className={styles.container_inner_info_text}>{text}</div>
                 </div>
                 <div className={styles.container_inner_image}>
                     <img className={styles.container_inner_image_photo} src={photo} alt="photo" />

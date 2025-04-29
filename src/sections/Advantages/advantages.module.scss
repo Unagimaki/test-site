@@ -12,3 +12,39 @@
     display: flex;
     gap: $size20px;
 }
+
+.advantages_list_mobile {
+    display: none;
+}
+
+
+@media (max-width: 375px) {
+    .container {
+        margin-bottom: min(26.67vw, 100px);
+    }
+    .advantages_list {
+        display: none;
+    }
+    .advantages_list_mobile {
+        margin-top: min(16vw, 60px);
+        margin-bottom: min(8.53vw, 32px);
+        overflow-x: scroll;
+        display: block;
+        width: 100vw;
+        padding-left: min(4.27vw, 16px);
+        &_line {
+            width: max-content;
+            display: flex;
+            gap: min(5.33vw, 20px);
+        }
+    }
+    .advantages_pagination_wrapper {
+        display: flex;
+        align-items: center;
+        justify-self: center;
+        &_inner {
+            display: flex;
+            gap: min(2.13vw, 8px);
+        }
+    }
+}

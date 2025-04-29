@@ -1,0 +1,14 @@
+@import '../../assets/styles/vars.scss';
+
+.container {
+
+}
+
+@media (max-width: 375px) {
+    .container {
+        width: min(3.2vw, 12px);
+        height: min(3.2vw, 12px);
+        border: min(0.27vw, 1px) solid #E3FF34;
+        border-radius: 50%;
+    }
+}
