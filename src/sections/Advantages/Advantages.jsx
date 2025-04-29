@@ -11,8 +11,8 @@ export const Advantages = () => {
                 <Title text='Register today to gain immediate access to this revolutionary trading system!'/>
                 <div className={styles.advantages_list}>
                     <AdvantageItem/>
-                    <AdvantageItem/>
-                    <AdvantageItem/>
+                    {/* <AdvantageItem/>
+                    <AdvantageItem/> */}
                 </div>
             </div>
         </div>

@@ -13,6 +13,7 @@
         &_info {
             padding: $size16px;
             &_tag {
+                font-family: $GRegular;
                 color: #fff;
                 font-size: $size14px;
                 text-align: center;
@@ -31,11 +32,13 @@
                 color: #E3FF34;
                 font-size: $size24px;
                 margin-bottom: $size20px;
+                font-family: $GSemiBold;
             }
         
             &_text {
                 color: #fff;
                 font-size: $size16px;
+                font-family: $GRegular;
             }
         }
         &_image {
@@ -48,6 +51,31 @@
                 position: absolute;
                 bottom: 5%;
                 right: 5%;
+            }
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .container {
+        width: min(67.2vw, 252px);
+        height: min(113.07vw, 424px);
+        border-radius: min(5.33vw, 20px);
+        &_inner {
+            &_info {
+                padding: min(4.27vw, 16px);
+                &_tag {
+                    font-size: min(3.73vw, 14px);
+                    height: min(6.93vw, 26px);
+                    border-radius: min(5.33vw, 20px);
+                    padding: 0 min(2.13vw, 8px);
+                }
+                &_title {
+                    font-size: min(6.4vw, 24px);
+                }
+                &_text {
+                    font-size: min(4.27vw, 16px);
+                }
             }
         }
     }

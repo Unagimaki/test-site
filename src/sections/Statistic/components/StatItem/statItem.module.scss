@@ -29,3 +29,26 @@
         }
     }
 }
+
+@media (max-width: 375px) {
+    .container {
+        width: min(91.47vw, 343px);
+        &_inner {
+            // flex-direction: column-reverse;
+            &_text {
+                height: max-content;
+                border: none;
+                font-size: min(4.27vw, 16px);
+                font-family: $GRegular;
+            }
+            &_count {
+                font-size: min(16vw, 60px);
+                font-family: $GSemiBold;
+            }
+            &_title {
+                font-size: min(6.4vw, 24px);
+                font-family: $GSemiBold;
+            }
+        }
+    }
+}

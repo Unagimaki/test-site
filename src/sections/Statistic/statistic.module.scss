@@ -6,6 +6,8 @@
         flex-direction: column;
         align-items: center;
         &_text {
+            
+            font-family: $GRegular;
             margin-top: min(3.25vw, 52px);
             color: #fff;
             width: min(45.5vw, 728px);
@@ -16,6 +18,35 @@
             display: flex;
             justify-content: center;
             gap: min(3.81vw, 61px);
+        }
+        &_bottom_text {
+            font-family: $GRegular;
+            font-size: $size16px;
+            text-align: center;
+            color: #fff;
+            margin-top: min(18.13vw, 68px);
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .container {
+        margin-bottom: min(26.67vw, 100px);
+        &_inner {
+            max-width: min(91.47vw, 343px);
+            margin: 0 auto;
+            &_text {
+                width: 100%;
+                font-size: min(3.73vw, 14px);
+            }
+            &_stat_list {
+                flex-direction: column;
+                text-align: center;
+            }
+            &_bottom_text {
+                font-size: min(4.27vw, 16px);
+                margin-top: min(18.13vw, 68px);
+            }
         }
     }
 }

@@ -14,11 +14,11 @@ function App() {
       <Header/>
       <Intro/>
       <Leaders/>
-      {/*<Timer/>
+      {/* <Timer/> */}
       <Table/>
       <Advantages/>
       <Statistic/>
-      <Footer/> */}
+      <Footer/>
     </div>
   );
 }

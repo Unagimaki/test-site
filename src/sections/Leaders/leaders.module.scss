@@ -96,6 +96,7 @@
         margin-top: min(26.67vw, 100px);
         height: max-content;
         &_inner {
+            margin-bottom: min(26.67vw, 100px);
             width: min(91.47vw, 343px);
             flex-direction: column-reverse;
             &_buttons_wrapper {

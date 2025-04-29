@@ -19,7 +19,8 @@
 
 @media (max-width: 375px) {
     .container {
-        width: min(18.13vw, 68px);
+        width: max-content;
+        padding: 0 min(2.13vw, 8px);
         height: min(6.93vw, 26px);
         border-radius: min(5.33vw, 20px);
         font-size: min(3.73vw, 14px);

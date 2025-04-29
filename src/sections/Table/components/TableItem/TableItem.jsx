@@ -1,8 +1,8 @@
 import styles from './tableItem.module.scss'
 
-export const TableItem = ({name = 'noName', operation = 'none', result = 'none'}) => {
+export const TableItem = ({ name = 'noName', operation = 'none', result = 'none' }) => {
     const profit = require('./assets/profit.png')
-    return(
+    return (
         <div className={styles.container}>
             <div className={styles.container_info}>
                 <div className={styles.container_name}>{name}</div>
@@ -10,7 +10,10 @@ export const TableItem = ({name = 'noName', operation = 'none', result = 'none'}
                 <div className={styles.container_result}>{result}</div>
                 <div className={styles.container_date}>08.04.25</div>
             </div>
-            <img src={profit} alt="result_type" />
+            <div className={styles.imageWrapper}>
+                <img src={profit} alt="result_type" />
+            </div>
+
         </div>
     )
 }

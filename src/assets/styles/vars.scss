@@ -16,11 +16,16 @@ $font-path-girloy: '../fonts/Gilroy/';
     font-family: 'GRegular';
     src: url('../fonts/Gilroy/Gilroy-Regular.ttf'),
 }
+@font-face {
+    font-family: 'GLight';
+    src: url('../fonts/Gilroy/Gilroy-Light.ttf'),
+}
 
 $GMedium: 'GMedium';
 $GBold: 'GBold';
 $GSemiBold: 'GSemiBold';
 $GRegular: 'GRegular';
+$GLight: 'GLight';
 
 
 $size8px: min(0.5vw, 8px);

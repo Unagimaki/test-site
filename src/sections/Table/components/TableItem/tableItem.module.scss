@@ -9,12 +9,54 @@
     padding: 0 $size8px 0 $size20px;
     border-radius: min(2.5vw, 40px);
     color: #fff;
+
+    .imageWrapper {
+        display: flex;
+        align-items: center;
+    }
+
     img {
         width: min(2.25vw, 36px);
         height: auto;
     }
+
     &_info {
         display: flex;
         gap: min(6.25vw, 100px);
+        font-family: $GRegular;
+
+        >*:not(:last-child) {
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+            padding-right: min(4.96vw, 18.6px);
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .container {
+        height: min(12.8vw, 48px);
+        flex-direction: row-reverse;
+        background-color: #18484A;
+        justify-content: center;
+        gap: 4vw;
+
+        .imageWrapper {
+            padding-right: min(4.96vw, 18.6px);
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        img {
+            width: min(6.4vw, 24px);
+            height: auto;
+        }
+
+        &_info {
+            font-size: min(3.2vw, 12px);
+
+            >*:not(:last-child) {
+                border-right: 1px solid rgba(255, 255, 255, 0.2);
+                padding-right: min(4.96vw, 18.6px);
+            }
+        }
     }
 }
