@@ -54,6 +54,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        font-family: $GRegular;
         &_author {
             opacity: .5;
             color: #fff;
@@ -84,5 +85,58 @@
     }
     100% {
         opacity: 1;
+    }
+}
+
+@media (max-width: 375px) {
+    .slider_pages {
+        display: none;
+    }
+    .container {
+        margin-top: min(26.67vw, 100px);
+        height: max-content;
+        &_inner {
+            width: min(91.47vw, 343px);
+            flex-direction: column-reverse;
+            &_buttons_wrapper {
+                position: static;
+                button {
+                    width: min(12.8vw, 48px);
+                    height: min(12.8vw, 48px);
+                    img {
+                        width: min(3.47vw, 13px);
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+    .slider_slide {
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 100%;
+        &_info {
+            text-align: center;
+            width: 100%;
+            font-size: min(4.27vw, 16px);
+            gap: min(16vw, 60px);
+            &_author {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                gap: min(5.33vw, 20px);
+            }
+        }
+        &_img {
+            margin-top: min(16vw, 60px);
+            margin-bottom: min(16vw, 60px);
+            width: min(42.67vw, 160px);
+            height: min(42.67vw, 160px);
+            overflow: hidden;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
     }
 }

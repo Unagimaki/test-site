@@ -13,8 +13,8 @@ function App() {
     <div className="App">
       <Header/>
       <Intro/>
-      {/* <Leaders/>
-      <Timer/>
+      <Leaders/>
+      {/*<Timer/>
       <Table/>
       <Advantages/>
       <Statistic/>
