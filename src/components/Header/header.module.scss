@@ -6,7 +6,14 @@
     display: flex;
     align-items: center;
 }
-
+.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(10px);
+}
 .container {
     background-color: #1A1A1ACC;
     height: min(6.25vw, 100px);
@@ -26,6 +33,11 @@
             color: #fff;
             font-family: $GMedium;
             font-size: $size16px;
+            transition: all .3s linear;
+            cursor: pointer;
+        }
+        &_header_button:hover {
+            color: #E3FF34;
         }
         &_reg_button {
             width: min(15.25vw, 244px);
@@ -35,6 +47,11 @@
             color: $yellow;
             font-family: $GMedium;
             font-size: $size16px;
+            transition: box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        &_reg_button:hover {
+            box-shadow: 0 4px 16px rgba(227, 255, 52, 0.4); // полупрозрачная тень
         }
     }
 }

@@ -37,7 +37,7 @@ export const Advantages = () => {
         // Очищаем обработчик при размонтировании компонента
         return () => window.removeEventListener('resize', updateDimensions);
     }, []);
-    
+
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex(prevIndex => {
@@ -59,8 +59,18 @@ export const Advantages = () => {
 
                 {/* Desktop */}
                 <div className={styles.advantages_list}>
-                    <AdvantageItem />
-                </div>
+                        {
+                            advantagesData.map(item => {
+                                return(
+                                    <AdvantageItem
+                                        tag={item.tag}
+                                        text={item.text}
+                                        title={item.title}
+                                        key={item.id}
+                                    />
+                                )
+                            })
+                        }                </div>
 
                 {/* Mobile slider */}
                 <div className={styles.advantages_list_mobile}>

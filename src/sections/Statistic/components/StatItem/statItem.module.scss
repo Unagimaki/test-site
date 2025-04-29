@@ -10,11 +10,13 @@
             color: #E3FF34;
             font-size: min(3.25vw, 52px);
             margin-bottom: $size24px;
+            font-family: $GSemiBold;
         }
         &_title {
             color: #E3FF34;
             font-size: $size24px;
             margin-bottom: min(2.25vw, 36px);
+            font-family: $GSemiBold;
         }
         &_text {
             display: flex;
@@ -26,6 +28,7 @@
             width: min(16.69vw, 267px);
             height: min(2.88vw, 46px);
             font-size: $size20px;
+            font-family: $GRegular;
         }
     }
 }

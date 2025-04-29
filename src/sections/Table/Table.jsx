@@ -12,7 +12,12 @@ export const Table = () => {
         <div className={styles.container}>
             <div className={styles.container_inner}>
                 <SubTitle text={'Trades'}/>
-                <Title text='GreenChart uses Artificial Intelligence and State-of-the art algorithms to identify only profitable trades'/>
+                <div className={styles.title_wrapper}>
+                    <Title text='GreenChart uses Artificial Intelligence and State-of-the art algorithms to identify only profitable trades'/>
+                </div>
+                <div className={styles.title_wrapper_mobile}>
+                    <Title text='GreenChart uses Artificial Intelligence and State-of-the art algorithms to identify only profitable trades'/>
+                </div>
                 
                 {/* <img className={styles.coins_top} src={coins_top} alt="coins_top" />
                 <img className={styles.coins_bottom} src={coins_bottom} alt="coins_bottom" /> */}

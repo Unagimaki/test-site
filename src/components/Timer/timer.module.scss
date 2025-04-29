@@ -3,7 +3,7 @@
 .container {
     position: fixed;
     z-index: 99;
-    bottom: 0;
+    bottom: 5%;
     left: 0;
     width: 100vw;
     display: flex;
@@ -22,6 +22,7 @@
         padding-left: min(2.5vw, 40px);
     }
     &_info {
+        font-family: $GBold;
         gap: min(2.25vw, 36px);
         display: flex;
         align-items: center;
@@ -61,6 +62,45 @@
             border: min(3.25vw, 4px) solid;
             border-color: rgba(255, 255, 255, 0.6);
             font-size: $size16px;
+            font-family: $GRegular;
+            transition: box-shadow 0.3s ease;
+            cursor: pointer;
+                
+            &:hover {
+                box-shadow: 0 4px 16px rgba(227, 255, 52, 0.4); // полупрозрачная тень
+            }
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .container {
+        &_inner {
+            width: min(91.47vw, 343px);
+            height: min(30.93vw, 116px);
+            border-top-left-radius: min(6.4vw, 24px);
+            border-top-right-radius: min(6.4vw, 24px);
+            border-bottom-left-radius: min(10.67vw, 40px);
+            border-bottom-right-radius: min(10.67vw, 40px);
+        }
+        &_info {
+            display: none;
+        }
+        &_timer {
+            width: 100%;
+            height: 100%;
+            background: none;
+            flex-direction: column;
+            &_count {
+                font-size: min(10.67vw, 40px);
+            }
+            &_button {
+                width: min(82.93vw, 311px);
+                height: min(12.8vw, 48px);
+                font-size: min(4.27vw, 16px);
+                border-radius: min(13.33vw, 50px);
+
+            }
         }
     }
 }

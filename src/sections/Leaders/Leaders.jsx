@@ -79,9 +79,7 @@ export const Leaders = () => {
             <img src={right} alt="right" />
           </button>
         </div>
-        <div
-          className={`${styles.slider_slide} ${fadeOut ? styles.fadeOut : ''} ${fadeIn ? styles.fadeIn : ''}`}
-        >
+        <div className={`${styles.slider_slide} ${fadeOut ? styles.fadeOut : ''} ${fadeIn ? styles.fadeIn : ''}`}>
           <div className={styles.slider_slide_info}>
             <div className={styles.slider_slide_info_text}>
               {slides[currentIndex].text}

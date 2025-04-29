@@ -15,28 +15,40 @@
         background-image: url('./assets/footer_img.png');
         background-repeat: no-repeat;
         background-position: center;
+        background-size: contain;
         border-radius: min(2.5vw, 40px);
         padding-top: min(4.38vw, 70px);
+        padding-bottom: min(2.31vw, 37px);
         &_logo {
             margin-bottom: min(4.88vw, 78px);
-        }
-        &_reg_button {
-            margin-bottom: min(3.25vw, 52px);
-            width: min(22.25vw, 356px);
-            height: min(3.75vw, 60px);
-            background-color: #E3FF34;
-            border-radius: min(3.13vw, 50px);
-
+            width: min(14.63vw, 234px);
+            img {
+                width: inherit;
+                height: auto;
+            }
         }
         &_menu_list {
+            font-size: $size14px;
+            margin-top: min(3.25vw, 52px);
             font-family: $GRegular;
             color: #fff;
             gap: min(1.75vw, 28px);
             display: flex;
             margin-bottom: min(3.88vw, 62px);
+            &_item {
+                cursor: pointer;
+                transition: all .3s linear;
+            }
+            &_item:hover {
+                color: #E3FF34;
+            }
         }
         &_info_list {
-            color: #ccc;
+            font-size: $size14px;
+            white-space: nowrap;
+            font-family: $GLight;
+            opacity: .2;
+            color: #fff;
             display: flex;
             gap: min(13.75vw, 220px);
             &_mobile {
@@ -71,7 +83,6 @@
                     align-items: center;
                     text-align: center;
                     color: #fff;
-                    font-family: $GLight;
                     font-size: min(3.73vw, 14px);
 
                     // Стили для внутренних элементов

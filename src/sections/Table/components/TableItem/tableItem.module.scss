@@ -9,7 +9,7 @@
     padding: 0 $size8px 0 $size20px;
     border-radius: min(2.5vw, 40px);
     color: #fff;
-
+    
     .imageWrapper {
         display: flex;
         align-items: center;
@@ -23,6 +23,7 @@
     &_info {
         display: flex;
         gap: min(6.25vw, 100px);
+        font-size: $size16px;
         font-family: $GRegular;
 
         >*:not(:last-child) {

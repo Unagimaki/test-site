@@ -9,6 +9,12 @@
     border-color: rgba(255, 255, 255, 0.6);
     font-size: $size16px;
     font-family: $GMedium;
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 0 4px 16px rgba(227, 255, 52, 0.4); // полупрозрачная тень
+    }
 }
 
 @media (max-width: 375px) {
@@ -17,6 +23,5 @@
         height: min(16vw, 60px);
         border-radius: min(13.33vw, 50px);
         font-size: min(4.27vw, 16px);
-
     }
 }
