@@ -39,14 +39,22 @@
     }
 }
 
+.fadeOut {
+    animation: out .5s forwards;
+    /* Слайд исчезает */
+}
+
+.fadeIn {
+    animation: opacity .5s forwards;
+    /* Слайд плавно появляется */
+}
+
 .slider_slide {
     display: flex;
     justify-content: space-between;
     scroll-snap-align: start;
     width: min(61.94vw, 991px);
     margin-bottom: min(5.19vw, 83px);
-    opacity: 0;
-    animation: opacity 0.5s forwards;
     &_info {
         width: min(31.88vw, 510px);
         color: #fff;
@@ -87,6 +95,15 @@
         opacity: 1;
     }
 }
+@keyframes out {
+    0% {
+        opacity: 1;
+    }
+        
+    100% {
+        opacity: 0;
+    }
+}
 
 @media (max-width: 375px) {
     .slider_pages {
@@ -94,6 +111,7 @@
     }
     .container {
         margin-top: min(26.67vw, 100px);
+        min-height: 100vh;
         height: max-content;
         &_inner {
             margin-bottom: min(26.67vw, 100px);
