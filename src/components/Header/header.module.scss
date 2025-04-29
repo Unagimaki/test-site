@@ -1,0 +1,97 @@
+@import '../../assets/styles/vars.scss';
+
+.container,
+.container_inner,
+.burger {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    background-color: #1A1A1ACC;
+    height: min(6.25vw, 100px);
+    justify-content: center;
+    &_inner {
+        width: min(73.75vw, 1600px);
+        gap: min(8.53vw, 136.5px);
+        &_logo {
+            width: min(10.44vw, 167px);
+            height: min(2vw, 32px);
+        }
+        &_buttons {
+            display: flex;
+            gap: min(3.34vw, 53.5px);
+        }
+        &_header_button {
+            color: #fff;
+            font-family: $GMedium;
+            font-size: $size16px;
+        }
+        &_reg_button {
+            width: min(15.25vw, 244px);
+            height: min(3.75vw, 60px);
+            border: min(0.06vw, 1px) solid $yellow;
+            border-radius: min(3.13vw, 50px);
+            color: $yellow;
+            font-family: $GMedium;
+            font-size: $size16px;
+        }
+    }
+}
+
+
+.burger {
+    flex-direction: column;
+    justify-content: center;
+    width: min(9.6vw, 36px);
+    height: min(9.6vw, 36px);
+    cursor: pointer;
+    background: none;
+    border: none;
+    z-index: 1001;
+    gap: min(0.8vw, 3px);
+    display: none;
+
+    span {
+        display: block;
+        height: min(0.53vw, 2px);
+        width: min(4.27vw, 16px);
+        background-color: $yellow;
+        transition: all 0.3s ease;
+        transform-origin: center;
+    }
+}
+
+.active {
+    span:nth-child(1) {
+        transform: rotate(45deg) translate(4px, 3px);
+    }
+    span:nth-child(2) {
+        opacity: 0;
+    }
+    span:nth-child(3) {
+        transform: rotate(-45deg) translate(4px, -3px);
+    }
+}
+
+@media (max-width: 375px) {
+    .container {
+        height: min(20.27vw, 76px);
+        &_inner {
+            justify-content: space-between;
+            &_logo {
+                width: min(44.53vw, 167px);
+                height: auto;
+            }
+            &_buttons {
+                display: none;
+            }
+            &_reg_button {
+                display: none;
+            }
+        }
+    }
+    .burger {
+        display: flex;
+    }
+}

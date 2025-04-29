@@ -1,0 +1,166 @@
+@import '../../../../assets/styles/vars.scss';
+
+.container {
+    width: min(27.25vw, 436px);
+    height: min(33.5vw, 536px);
+    background-color: #fff;
+    border-radius: min(1.25vw, 20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &_inner {
+        width: min(22.25vw, 356px);
+        height: min(28.5vw, 456px);
+        display: flex;
+        flex-direction: column;
+        gap: min(2vw, 32px);
+
+        &_forms {
+            display: flex;
+            flex-direction: column;
+            gap: min(1.25vw, 20px);
+        }
+    }
+
+    overflow: hidden;
+}
+
+.form_group {
+    display: flex;
+    flex-direction: column;
+    gap: min(0.5vw, 8px);
+    color: $grey;
+
+    &_label {
+        font-size: $size16px;
+        font-family: $GMedium;
+    }
+
+    &_input {
+        height: min(2.75vw, 44px);
+        font-size: $size14px;
+        padding: $size12px;
+        border-radius: $size8px;
+        border: 1px solid #ccc;
+        font-family: $GRegular;
+    }
+}
+
+.phone_form_wrapper {
+    &_label {
+        font-size: $size16px;
+        font-family: $GMedium;
+        color: #999;
+    }
+
+    &_selected {
+        margin-top: $size8px;
+        height: min(2.75vw, 44px);
+        border: 1px solid #ccc;
+        border-radius: $size8px;
+        padding: $size12px;
+        display: flex;
+        align-items: center;
+        gap: $size12px;
+        cursor: pointer;
+        overflow: hidden;
+        padding: $size14px;
+        font-size: $size14px;
+        font-family: $GRegular;
+        &_text {
+            border-left: min(0.06vw, 1px) solid #ddd;
+            padding-left: $size12px;
+            padding: $size14px;
+        }
+
+        img {
+            width: min(1.5vw, 24px);
+            height: min(1.25vw, 20px);
+        }
+    }
+
+    &_list {
+        border: 1px solid #ccc;
+        max-height: 184px;
+        overflow-y: scroll;
+        position: absolute;
+        width: min(22.25vw, 356px);
+        max-height: 184px;
+        &_item {
+            height: min(2.75vw, 44px);
+            padding: $size14px;
+            display: flex;
+            align-items: center;
+            gap: $size12px;
+            font-size: $size14px;
+            background-color: $pink;
+            cursor: pointer;
+            font-family: $GRegular;
+            overflow: hidden;
+            img {
+                width: min(1.5vw, 24px);
+                height: min(1.25vw, 20px);
+            }
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .container {
+        margin-top: min(10.67vw, 40px);
+        width: 100%;
+        height: min(138.67vw, 520px);
+        &_inner {
+            gap: min(8.53vw, 32px);
+            width: min(80.8vw, 303px);
+            height: min(121.6vw, 456px);
+            &_forms {
+                gap: min(5.33vw, 20px);
+                // height: min(97.07vw, 364px);
+            }
+        }
+    }
+    .form_group {
+        gap: min(2.13vw, 8px);
+        &_label {
+            font-size: min(4.27vw, 16px);
+        }
+        &_input {
+            padding: min(3.73vw, 14px);
+            font-size: min(3.73vw, 14px);
+            height: min(11.73vw, 44px);
+            border-radius: min(2.13vw, 8px);
+        }
+    }
+    .phone_form_wrapper {
+        &_label {
+            font-size: min(4.27vw, 16px);
+        }
+        &_selected {
+            padding: min(3.73vw, 14px);
+            height: min(11.73vw, 44px);
+            font-size: min(3.73vw, 14px);
+            gap: min(3.2vw, 12px);
+            img {
+                width: min(6.4vw, 24px);
+                height: min(5.33vw, 20px);
+            }
+            &_text {
+                padding-left: min(3.73vw, 14px);
+            }
+        }
+        &_list {
+            width: min(80.8vw, 303px);
+            &_item {
+                font-size: min(3.73vw, 14px);
+                padding: min(3.73vw, 14px);
+                gap: min(3.2vw, 12px);
+            }
+            img {
+                width: min(6.4vw, 24px);
+                height: min(5.33vw, 20px);
+            }
+        }
+    }
+}

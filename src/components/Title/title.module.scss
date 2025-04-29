@@ -1,0 +1,10 @@
+@import '../../assets/styles/vars.scss';
+
+.container {
+    width: min(37.69vw, 603px);
+    text-align: center;
+    font-size: min(2vw, 32px);
+    color: #fff;
+    margin-bottom: min(7.5vw, 120px);
+    margin: 0 auto;
+}

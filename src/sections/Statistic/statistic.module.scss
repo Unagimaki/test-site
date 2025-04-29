@@ -1,0 +1,21 @@
+@import '../../assets/styles/vars.scss';
+
+.container {
+    &_inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &_text {
+            margin-top: min(3.25vw, 52px);
+            color: #fff;
+            width: min(45.5vw, 728px);
+            text-align: center;
+            margin-bottom: min(6.25vw, 100px);
+        }
+        &_stat_list {
+            display: flex;
+            justify-content: center;
+            gap: min(3.81vw, 61px);
+        }
+    }
+}

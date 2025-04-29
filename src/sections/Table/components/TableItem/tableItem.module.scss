@@ -1,0 +1,20 @@
+@import '../../../../assets/styles/vars.scss';
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #12393B;
+    height: min(3.25vw, 52px);
+    padding: 0 $size8px 0 $size20px;
+    border-radius: min(2.5vw, 40px);
+    color: #fff;
+    img {
+        width: min(2.25vw, 36px);
+        height: auto;
+    }
+    &_info {
+        display: flex;
+        gap: min(6.25vw, 100px);
+    }
+}

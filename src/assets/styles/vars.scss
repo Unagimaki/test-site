@@ -1,0 +1,37 @@
+$font-path-girloy: '../fonts/Gilroy/';
+
+@font-face {
+    font-family: 'GMedium';
+    src: url('../fonts/Gilroy/Gilroy-Medium.ttf'),
+}
+@font-face {
+    font-family: 'GBold';
+    src: url('../fonts/Gilroy/Gilroy-Bold.ttf'),
+}
+@font-face {
+    font-family: 'GSemiBold';
+    src: url('../fonts/Gilroy/Gilroy-Semibold.ttf'),
+}
+@font-face {
+    font-family: 'GRegular';
+    src: url('../fonts/Gilroy/Gilroy-Regular.ttf'),
+}
+
+$GMedium: 'GMedium';
+$GBold: 'GBold';
+$GSemiBold: 'GSemiBold';
+$GRegular: 'GRegular';
+
+
+$size8px: min(0.5vw, 8px);
+$size12px: min(0.75vw, 12px);
+$size16px: min(1vw, 16px);
+$size14px: min(0.88vw, 14px);
+$size20px: min(1.25vw, 20px);
+$size24px: min(1.5vw, 24px);
+$size32px: min(3.69vw, 32px);
+$yellow: #E3FF34;
+$grey: #999999;
+$pink: #F2F2F2;
+$lime: #E3FF34;
+

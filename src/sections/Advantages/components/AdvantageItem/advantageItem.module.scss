@@ -1,0 +1,54 @@
+@import '../../../../assets/styles/vars.scss';
+
+.container {
+    width: min(23.75vw, 380px);
+    height: min(30.88vw, 494px);
+    border-radius: $size20px;
+    background-color: #18484A;
+    &_inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        &_info {
+            padding: $size16px;
+            &_tag {
+                color: #fff;
+                font-size: $size14px;
+                text-align: center;
+                background-color: #12393B;
+                height: min(1.63vw, 26px);
+                width: max-content;
+                padding: 0 $size8px;
+                border-radius: min(1.25vw, 20px);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: min(2.81vw, 45px);
+            }
+        
+            &_title {
+                color: #E3FF34;
+                font-size: $size24px;
+                margin-bottom: $size20px;
+            }
+        
+            &_text {
+                color: #fff;
+                font-size: $size16px;
+            }
+        }
+        &_image {
+            position: relative;
+            &_photo {
+                width: 100%;
+                border-radius: $size20px;
+            }
+            &_icon {        
+                position: absolute;
+                bottom: 5%;
+                right: 5%;
+            }
+        }
+    }
+}

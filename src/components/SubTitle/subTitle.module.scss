@@ -1,0 +1,17 @@
+@import '../../assets/styles/vars.scss';
+
+.container {
+    font-size: $size14px;
+    text-align: center;
+    background-color: #18484A;
+    height: min(1.63vw, 26px);
+    width: max-content;
+    padding: 0 $size8px;
+    border-radius: min(1.25vw, 20px);
+    color: #fff;
+    margin: 0 auto $size32px auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

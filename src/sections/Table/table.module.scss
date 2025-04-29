@@ -1,0 +1,51 @@
+@import '../../assets/styles/vars.scss';
+
+.container {
+    &_inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &_subtitle {
+            font-size: $size14px;
+            text-align: center;
+            background-color: #3d4242;
+            opacity: .5;
+            width: min(3.69vw, 59px);
+            border-radius: min(1.25vw, 20px);
+            color: #fff;
+            margin-bottom: $size32px;
+        }
+        &_title {
+            text-align: center;
+            font-size: $size32px;
+            color: #fff;
+            margin-bottom: min(4.25vw, 68px);
+        }
+    }
+}
+
+.table {
+    width: min(63.75vw, 1020px);
+    height: min(46.63vw, 746px);
+    background-color: #18484A;
+    padding: $size20px;
+    border-radius: min(1.75vw, 28px);
+    &_item_list {
+        display: flex;
+        flex-direction: column;
+        gap: min(1vw, 16px);
+    }
+    &_title {
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+        height: min(1.63vw, 26px);
+        padding: 0 $size8px 0 $size20px;
+        margin-bottom: $size16px;
+        color: #ccc;
+        &_info {
+            display: flex;
+            gap: min(6.25vw, 100px);
+        }
+    }
+}

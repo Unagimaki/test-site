@@ -1,0 +1,1 @@
+export const text = 'I have been using this platform for several years now and I can say that investing is the best way to earn passive income. Even as a side job. I encourage everyone to register today to avoid being too late tomorrow. Everyone in the UK will benefit from it!'

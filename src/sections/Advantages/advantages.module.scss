@@ -1,0 +1,14 @@
+@import '../../assets/styles/vars.scss';
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+
+}
+
+.advantages_list {
+    margin-top: min(5vw, 80px);
+    display: flex;
+    gap: $size20px;
+}
