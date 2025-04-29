@@ -49,7 +49,7 @@ export const Header = () => {
                 <button className={`${styles.burger} ${menuOpen ? styles.active : ''}`} onClick={handleMenu}>
                     <span></span><span></span><span></span>
                 </button>
-                { menuOpen && <DropdownMenu/> }
+                { menuOpen && <DropdownMenu handleMenu={handleMenu}/> }
             </div>
         </div>
     )

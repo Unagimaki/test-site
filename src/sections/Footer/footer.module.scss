@@ -64,6 +64,10 @@
             width: min(91.47vw, 343px);
             height: min(167.73vw, 629px);
             border-radius: min(9.6vw, 36px);
+            &_logo {
+                width: min(44.53vw, 167px);
+                margin-bottom: min(14.93vw, 56px);
+            }
             &_menu_list {
                 margin-top: min(19.07vw, 71.5px);
                 margin-bottom: min(12.67vw, 27.5px);

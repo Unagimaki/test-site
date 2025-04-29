@@ -1,14 +1,25 @@
+import { Link } from 'react-scroll'
 import styles from './dropdownMenu.module.scss'
 
-export const DropdownMenu = () => {
+export const DropdownMenu = ({handleMenu}) => {
     return(
         <div className={styles.dropdownMenu}>
             <div className={styles.dropdownMenu_list}>
-                <button className={styles.dropdownMenu_list_button}>Instruction</button>
-                <button className={styles.dropdownMenu_list_button}>Advantages</button>
-                <button className={styles.dropdownMenu_list_button}>Investments</button>
-                <button className={styles.dropdownMenu_list_button}>Expert Opinion</button>
-                <button className={styles.dropdownMenu_list_button}>Support</button>
+                    <Link to="Leaders" smooth={true} duration={500}>
+                        <button onClick={handleMenu} className={styles.dropdownMenu_list_button}>Leaders</button>
+                    </Link>
+
+                    <Link to="Trades" smooth={true} duration={500}>
+                        <button onClick={handleMenu} className={styles.dropdownMenu_list_button}>Trades</button>
+                    </Link>
+
+                    <Link to="Advantages" smooth={true} duration={500}>
+                        <button onClick={handleMenu} className={styles.dropdownMenu_list_button}>Advantages</button>
+                    </Link>
+
+                    <Link to="Stats" smooth={true} duration={500}>
+                        <button onClick={handleMenu} className={styles.dropdownMenu_list_button}>Stats</button>
+                    </Link>
             </div>
             <div className={styles.dropdownMenu_reg_button}>Register Now</div>
             
